@@ -1,0 +1,36 @@
+@mixin overal {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin textStyle($size, $weight, $color, $transform,) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-transform: $transform;
+}
+
+@mixin boxShadow {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+@mixin mainStyle {
+    background: $secendryColor;
+    height: 600px;
+    padding: 1rem;
+}
+
+@mixin mediaquery($size) {
+    @if($size == M) {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }@else if ($size == L) {
+        @media (min-width: 768px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+}
