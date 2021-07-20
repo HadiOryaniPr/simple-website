@@ -29,6 +29,21 @@ body {
             cursor: pointer;
         }
     }
+
+    .hambureger-menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+        display: none;
+
+        span {
+            width: 20px;
+            height: 2px;
+            margin: 3px;
+            background: $secendryColor;
+            display: inline-block;
+        }
+    }
 }
 
 // ************************* navbar and logo image
@@ -234,6 +249,12 @@ body {
     .navbar {
         display: none;
     }
+
+    .header {
+        .hambureger-menu {
+            display: flex;
+        }
+    }
     
     .maincontainer {
         flex-direction: column-reverse;
@@ -258,15 +279,16 @@ body {
 
     .footer {
         height: 500px;
+        justify-content: space-around;
         flex-direction: column;
 
         .about {
             width: 100%;
-            padding: 3rem  2rem;
+            text-align: center;
         }
 
         .contact {
-            margin-bottom: 4rem;
+            padding: 0 0 3rem 0;
         }
     }
 }
