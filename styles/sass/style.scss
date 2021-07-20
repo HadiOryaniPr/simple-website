@@ -17,6 +17,7 @@ body {
     align-items: center;
     background: $primaryColor;
     height: 55px;
+    width: 100%;
 
     span {
         @include textStyle(1.2rem, bold, $secendryColor, capitalize);
@@ -230,7 +231,9 @@ body {
 }
 
 @include mediaquery(M) {
-
+    .navbar {
+        display: none;
+    }
     
     .maincontainer {
         flex-direction: column-reverse;
@@ -256,11 +259,14 @@ body {
     .footer {
         height: 500px;
         flex-direction: column;
-        margin: 1rem auto;
 
         .about {
             width: 100%;
-            padding: 4rem  2rem;
+            padding: 3rem  2rem;
+        }
+
+        .contact {
+            margin-bottom: 4rem;
         }
     }
 }
