@@ -1,0 +1,266 @@
+@import "variablse";
+@import "mixins";
+
+* {
+   @include overal;
+}
+
+body {
+    background: $bgColor;
+}
+
+// ************************* header and logo name
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $primaryColor;
+    height: 55px;
+
+    span {
+        @include textStyle(1.2rem, bold, $secendryColor, capitalize);
+        margin: 2rem;
+        transition: all .15s ease-in;
+
+        &:hover {
+            color: $hoverColor;
+            cursor: pointer;
+        }
+    }
+}
+
+// ************************* navbar and logo image
+
+.navbar {
+    display: flex;
+    align-items: center;
+
+    ul {
+        display: flex;
+        list-style: none;
+
+        a {
+            @include textStyle(0.9rem, 600, $secendryColor, capitalize);
+            text-decoration: none;
+            padding: 12px;
+            transition: all .15s ease-in;
+
+            &:hover {
+                color: $hoverColor;
+            }
+        }
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: block;
+        margin: 0.8rem 2rem 0.8rem 1rem;
+    }
+}
+
+// ************************* main and aside
+
+.maincontainer {
+    display: flex;
+    margin: 2rem;
+    background: $bgColor;
+
+    aside {
+        width: 25%; 
+        margin-right: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+           background: $primaryColor;
+           width: 100%;
+           height: 100px;
+           line-height: 100px;
+           border-radius: 10px;
+           @include boxShadow;
+           transition: all .15s ease-in;
+
+           &:hover {
+               transform: translateY(-5px);
+               cursor: pointer;
+               background: #432fc5;
+           }
+
+           p {
+               @include textStyle(0.8rem, bold, $secendryColor, capitalize);
+               text-align: center;
+           }
+        }
+    }
+
+
+
+// ************************ main styles
+    main {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+// ************************* main image
+
+        img {
+            width: 500px;
+            @include boxShadow;
+        }
+
+// ************************* main content
+
+        .maincontent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                margin: 1rem 0 1rem;
+                @include textStyle(1.5rem, bold, $primaryColor, uppercase);
+                letter-spacing: 5px;
+            }
+    
+            p {
+                margin: 1rem 0 3rem;
+                @include textStyle(0.9rem, bold, black, capitalize);
+            }
+        }
+    }
+
+    aside, main {
+        @include mainStyle;
+        @include boxShadow;
+    }
+}
+
+// ************************* cards styles 
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: calc(100% - 4rem);
+    margin: 1rem auto;
+
+    .card {
+        
+        img {
+            width: 100%;
+            @include boxShadow;
+        }
+
+    .cardcontent {
+            padding: 1rem;
+            background: $secendryColor;
+            @include boxShadow;
+            transition: all .20s ease-in;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+                
+                p {@include textStyle(.9rem, 700, black, capitalize);}
+            }
+
+            p {
+                text-align: center;
+                margin: 0.5rem 0 1rem;
+                line-height: 1.4rem;
+                padding: 0 1rem 0;
+                @include textStyle(.9rem, 600, #7e7e7e, capitalize);
+            }
+
+            span {
+                @include textStyle(.9rem, bold, $primaryColor, capitalize);
+                display: inline-block;
+            }
+        }
+    }
+}
+
+// ************************* footer styles
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    background: $primaryColor;
+
+    .about {
+        width: 50%;
+        padding: 0 3rem 0;
+        line-height: 1.5rem;
+
+        p {
+            @include textStyle(.9rem, 600, $secendryColor, capitalize);
+        }
+    }
+
+    .contact {
+        padding: 0 5rem 0;
+
+        ul {
+            list-style: none;
+
+            a {
+                @include textStyle(.9rem, 500, $secendryColor, capitalize);
+                text-decoration: none;
+                display: inline-block;
+                margin: 10px;
+                transition: all .15s ease-in;
+
+                &:hover {
+                  padding-bottom: 0.3rem;  
+                  border-bottom: 2px solid $secendryColor;
+                }
+            }
+        }
+
+    }
+}
+
+@include mediaquery(M) {
+
+    
+    .maincontainer {
+        flex-direction: column-reverse;
+
+        main {
+            width: 100%;
+
+            img {
+                width: 400px;
+            }
+        }
+
+        aside {
+            margin: 1.5rem 0;
+            width: 100%;
+        }
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .footer {
+        height: 500px;
+        flex-direction: column;
+        margin: 1rem auto;
+
+        .about {
+            width: 100%;
+            padding: 4rem  2rem;
+        }
+    }
+}
