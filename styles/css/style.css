@@ -20,13 +20,13 @@ body {
 .header span {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
   text-transform: capitalize;
   margin: 2rem;
   transition: all 0.15s ease-in;
 }
 .header span:hover {
-  color: #1b1b1b;
+  color: #284b63;
   cursor: pointer;
 }
 .header .hambureger-menu {
@@ -39,7 +39,7 @@ body {
   width: 20px;
   height: 2px;
   margin: 3px;
-  background: #fff;
+  background: #ffffff;
   display: inline-block;
 }
 
@@ -54,14 +54,14 @@ body {
 .navbar ul a {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
   text-transform: capitalize;
   text-decoration: none;
   padding: 12px;
   transition: all 0.15s ease-in;
 }
 .navbar ul a:hover {
-  color: #1b1b1b;
+  color: #284b63;
 }
 .navbar img {
   width: 40px;
@@ -97,12 +97,12 @@ body {
 .maincontainer aside div:hover {
   transform: translateY(-5px);
   cursor: pointer;
-  background: #cbf3f0;
+  background: #284b63;
 }
 .maincontainer aside div p {
   font-size: 0.8rem;
   font-weight: bold;
-  color: #fff;
+  color: #ffffff;
   text-transform: capitalize;
   text-align: center;
 }
@@ -114,7 +114,7 @@ body {
   align-items: center;
 }
 .maincontainer main img {
-  width: 500px;
+  width: 400px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
@@ -127,7 +127,7 @@ body {
   margin: 1rem 0 1rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #2ec4b6;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -166,7 +166,12 @@ body {
 }
 .cards .card .cardcontent {
   padding: 1rem;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   transition: all 0.2s ease-in;
@@ -178,7 +183,7 @@ body {
 .cards .card .cardcontent:hover p {
   font-size: 0.9rem;
   font-weight: 700;
-  color: black;
+  color: #073b4c;
   text-transform: capitalize;
 }
 .cards .card .cardcontent p {
@@ -188,13 +193,13 @@ body {
   padding: 0 1rem 0;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #7e7e7e;
+  color: #4f6d81;
   text-transform: capitalize;
 }
 .cards .card .cardcontent span {
   font-size: 0.9rem;
   font-weight: bold;
-  color: #2ec4b6;
+  color: #0f3c5a;
   text-transform: capitalize;
   display: inline-block;
 }
@@ -214,7 +219,7 @@ body {
 .footer .about p {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
   text-transform: capitalize;
 }
 .footer .contact {
@@ -226,7 +231,7 @@ body {
 .footer .contact ul a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   text-transform: capitalize;
   text-decoration: none;
   display: inline-block;
@@ -235,7 +240,7 @@ body {
 }
 .footer .contact ul a:hover {
   padding-bottom: 0.3rem;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #ffffff;
 }
 
 @media (max-width: 768px) {
