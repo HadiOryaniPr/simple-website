@@ -34,6 +34,11 @@ body {
   margin: 0.8rem 1.5rem;
   color: #ffffff;
   cursor: pointer;
+  display: none;
+}
+
+.active {
+  transform: translate(0);
 }
 
 .navbar {
@@ -62,10 +67,6 @@ body {
   border-radius: 50%;
   display: block;
   margin: 0.8rem 2rem 0.8rem 1rem;
-}
-
-.showmenu {
-  transform: translate(0);
 }
 
 .maincontainer {
@@ -241,6 +242,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .header .fa-bars {
+    display: block;
+  }
+
   .navbar {
     display: flex;
     justify-content: center;
@@ -268,10 +273,6 @@ body {
     display: none;
   }
 
-  .header .hambureger-menu {
-    display: flex;
-  }
-
   .maincontainer {
     flex-direction: column-reverse;
   }
@@ -279,7 +280,7 @@ body {
     width: 100%;
   }
   .maincontainer main img {
-    width: 400px;
+    width: 300px;
   }
   .maincontainer aside {
     margin: 1.5rem 0;

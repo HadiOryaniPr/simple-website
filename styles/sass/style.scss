@@ -35,7 +35,12 @@ body {
       margin: 0.8rem 1.5rem;
       color: $secendryColor;
       cursor: pointer;
+      display: none;
     }
+}
+
+.active {
+    transform: translate(0);
 }
 
 // ************************* navbar and logo image
@@ -69,9 +74,6 @@ body {
     }
 }
 
-.showmenu {
-    transform: translate(0);
-}
 
 
 // ************************* main and aside
@@ -249,7 +251,11 @@ body {
 
 
 @include mediaquery(M) {
-    
+    .header {
+        .fa-bars {
+            display: block;
+        }
+    }
     .navbar {
         display: flex;
         justify-content: center;
@@ -280,12 +286,6 @@ body {
             display: none;
         }
     }
-
-    .header {
-        .hambureger-menu {
-            display: flex;
-        }
-    }
     
     .maincontainer {
         flex-direction: column-reverse;
@@ -294,7 +294,7 @@ body {
             width: 100%;
 
             img {
-                width: 400px;
+                width: 300px;
             }
         }
 
