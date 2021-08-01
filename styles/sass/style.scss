@@ -30,19 +30,11 @@ body {
         }
     }
 
-    .hambureger-menu {
-        display: flex;
-        flex-direction: column;
-        padding: 0 2rem;
-        display: none;
-
-        span {
-            width: 20px;
-            height: 3px;
-            margin: 3px;
-            background: $secendryColor;
-            display: inline-block;
-        }
+    .fa-bars {
+      font-size: 30px;
+      margin: 0.8rem 1.5rem;
+      color: $secendryColor;
+      cursor: pointer;
     }
 }
 
@@ -76,6 +68,11 @@ body {
         margin: 0.8rem 2rem 0.8rem 1rem;
     }
 }
+
+.showmenu {
+    transform: translate(0);
+}
+
 
 // ************************* main and aside
 
@@ -250,9 +247,38 @@ body {
     }
 }
 
+
 @include mediaquery(M) {
+    
     .navbar {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+    
+
+        ul {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            background: blue;
+            margin: 1.7rem auto;
+            width: 50%;
+            height: 650px;
+            transform: translate(700px);
+            transition: all .15s ease-in;
+            
+            a {
+                display: inline-block;
+                margin-top: 30px;
+            }
+        }
+
+        img {
+            display: none;
+        }
     }
 
     .header {

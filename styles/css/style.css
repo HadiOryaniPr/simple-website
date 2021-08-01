@@ -29,18 +29,11 @@ body {
   color: #284b63;
   cursor: pointer;
 }
-.header .hambureger-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 0 2rem;
-  display: none;
-}
-.header .hambureger-menu span {
-  width: 20px;
-  height: 3px;
-  margin: 3px;
-  background: #ffffff;
-  display: inline-block;
+.header .fa-bars {
+  font-size: 30px;
+  margin: 0.8rem 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .navbar {
@@ -69,6 +62,10 @@ body {
   border-radius: 50%;
   display: block;
   margin: 0.8rem 2rem 0.8rem 1rem;
+}
+
+.showmenu {
+  transform: translate(0);
 }
 
 .maincontainer {
@@ -245,6 +242,29 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  .navbar ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    background: blue;
+    margin: 1.7rem auto;
+    width: 50%;
+    height: 650px;
+    transform: translate(700px);
+    transition: all 0.15s ease-in;
+  }
+  .navbar ul a {
+    display: inline-block;
+    margin-top: 30px;
+  }
+  .navbar img {
     display: none;
   }
 
