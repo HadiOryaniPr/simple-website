@@ -6,33 +6,33 @@
 }
 
 body {
-  background: #2ec4b6 linear-gradient(62deg, #2ec4b6 0%, #cbf3f0 100%);
+  background: #5000ca;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #2ec4b6;
+  background: #5000ca;
   height: 55px;
   width: 100%;
 }
 .header span {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffff;
   text-transform: capitalize;
   margin: 2rem;
   transition: all 0.15s ease-in;
 }
 .header span:hover {
-  color: #284b63;
+  color: #fff;
   cursor: pointer;
 }
 .header .fa-bars {
   font-size: 30px;
   margin: 0.8rem 1.5rem;
-  color: #ffffff;
+  color: #ffff;
   cursor: pointer;
   display: none;
 }
@@ -52,14 +52,14 @@ body {
 .navbar ul a {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #ffff;
   text-transform: capitalize;
   text-decoration: none;
   padding: 12px;
   transition: all 0.15s ease-in;
 }
 .navbar ul a:hover {
-  color: #284b63;
+  color: #fff;
 }
 .navbar img {
   width: 40px;
@@ -72,7 +72,7 @@ body {
 .maincontainer {
   display: flex;
   margin: 2rem;
-  background: #2ec4b6 linear-gradient(62deg, #2ec4b6 0%, #cbf3f0 100%);
+  background: #5000ca;
 }
 .maincontainer aside {
   width: 25%;
@@ -83,7 +83,7 @@ body {
   align-items: center;
 }
 .maincontainer aside div {
-  background: #2ec4b6;
+  background: #5000ca;
   width: 100%;
   height: 100px;
   line-height: 100px;
@@ -100,7 +100,7 @@ body {
 .maincontainer aside div p {
   font-size: 0.8rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffff;
   text-transform: capitalize;
   text-align: center;
 }
@@ -125,7 +125,7 @@ body {
   margin: 1rem 0 1rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffff;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -179,9 +179,9 @@ body {
   cursor: pointer;
 }
 .cards .card .cardcontent:hover p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  color: #073b4c;
+  color: #fff;
   text-transform: capitalize;
 }
 .cards .card .cardcontent p {
@@ -189,15 +189,15 @@ body {
   margin: 0.5rem 0 1rem;
   line-height: 1.4rem;
   padding: 0 1rem 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #4f6d81;
   text-transform: capitalize;
 }
 .cards .card .cardcontent span {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
-  color: #0f3c5a;
+  color: #fff;
   text-transform: capitalize;
   display: inline-block;
 }
@@ -206,22 +206,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 200px;
-  background: #2ec4b6;
+  height: 300px;
+  background: url(/images/wave.svg);
 }
 .footer .about {
   width: 50%;
-  padding: 0 3rem 0;
+  padding: 4.5rem 2rem 0;
   line-height: 1.5rem;
 }
 .footer .about p {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #ffff;
   text-transform: capitalize;
 }
 .footer .contact {
-  padding: 0 5rem 0;
+  position: relative;
+  right: 250px;
+  top: 30px;
 }
 .footer .contact ul {
   list-style: none;
@@ -229,7 +231,7 @@ body {
 .footer .contact ul a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #ffffff;
+  color: #ffff;
   text-transform: capitalize;
   text-decoration: none;
   display: inline-block;
@@ -238,7 +240,7 @@ body {
 }
 .footer .contact ul a:hover {
   padding-bottom: 0.3rem;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #ffff;
 }
 
 @media (max-width: 768px) {
