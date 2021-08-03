@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #5000ca;
+  background: #3a0ca3;
 }
 
 .header {
@@ -35,10 +35,6 @@ body {
   color: #ffff;
   cursor: pointer;
   display: none;
-}
-
-.active {
-  transform: translate(0);
 }
 
 .navbar {
@@ -95,7 +91,6 @@ body {
 .maincontainer aside div:hover {
   transform: translateY(-5px);
   cursor: pointer;
-  background: #284b63;
 }
 .maincontainer aside div p {
   font-size: 0.8rem;
@@ -173,9 +168,10 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   transition: all 0.2s ease-in;
+  margin-top: 1rem;
 }
 .cards .card .cardcontent:hover {
-  transform: scale(1.1);
+  transform: translateY(-10px);
   cursor: pointer;
 }
 .cards .card .cardcontent:hover p {
@@ -191,7 +187,7 @@ body {
   padding: 0 1rem 0;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #4f6d81;
+  color: #e6e6e6;
   text-transform: capitalize;
 }
 .cards .card .cardcontent span {
@@ -249,30 +245,10 @@ body {
   }
 
   .navbar {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 99;
-  }
-  .navbar ul {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    background: blue;
-    margin: 1.7rem auto;
-    width: 50%;
-    height: 650px;
-    transform: translate(700px);
-    transition: all 0.15s ease-in;
-  }
-  .navbar ul a {
-    display: inline-block;
-    margin-top: 30px;
-  }
-  .navbar img {
-    display: none;
   }
 
   .maincontainer {
@@ -297,6 +273,7 @@ body {
     height: 500px;
     justify-content: space-around;
     flex-direction: column;
+    background: #5000ca;
   }
   .footer .about {
     width: 100%;
@@ -304,6 +281,8 @@ body {
   }
   .footer .contact {
     padding: 0 0 3rem 0;
+    left: 10px;
+    top: 30px;
   }
 }
 

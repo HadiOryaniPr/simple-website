@@ -6,7 +6,7 @@
 }
 
 body {
-    background: $bgColor;
+    background: #3a0ca3;
 }
 
 // ************************* header and logo name
@@ -39,9 +39,9 @@ body {
     }
 }
 
-.active {
-    transform: translate(0);
-}
+// .active {
+//     transform: translate(0);
+// }
 
 // ************************* navbar and logo image
 
@@ -103,7 +103,6 @@ body {
            &:hover {
                transform: translateY(-5px);
                cursor: pointer;
-               background: #284b63;
            }
 
            p {
@@ -183,10 +182,10 @@ body {
             box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
             @include boxShadow;
             transition: all .20s ease-in;
-            
+            margin-top: 1rem;
 
             &:hover {
-                transform: scale(1.1);
+                transform: translateY(-10px);
                 cursor: pointer;
                 
                 p {@include textStyle(.8rem, 700, #fff, capitalize);}
@@ -197,7 +196,7 @@ body {
                 margin: 0.5rem 0 1rem;
                 line-height: 1.4rem;
                 padding: 0 1rem 0;
-                @include textStyle(.8rem, 600, #4f6d81, capitalize);
+                @include textStyle(.8rem, 600, #e6e6e6, capitalize);
             }
 
             span {
@@ -260,34 +259,34 @@ body {
         }
     }
     .navbar {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         z-index: 99;
     
 
-        ul {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            position: absolute;
-            right: 0;
-            background: blue;
-            margin: 1.7rem auto;
-            width: 50%;
-            height: 650px;
-            transform: translate(700px);
-            transition: all .15s ease-in;
+        // ul {
+        //     flex-direction: column;
+        //     justify-content: flex-start;
+        //     align-items: center;
+        //     position: absolute;
+        //     right: 0;
+        //     background: blue;
+        //     margin: 1.7rem auto;
+        //     width: 50%;
+        //     height: 650px;
+        //     transform: translate(700px);
+        //     transition: all .15s ease-in;
             
-            a {
-                display: inline-block;
-                margin-top: 30px;
-            }
-        }
+        //     a {
+        //         display: inline-block;
+        //         margin-top: 30px;
+        //     }
+        // }
 
-        img {
-            display: none;
-        }
+        // img {
+        //     display: none;
+        // }
     }
     
     .maincontainer {
@@ -315,6 +314,7 @@ body {
         height: 500px;
         justify-content: space-around;
         flex-direction: column;
+        background: $primaryColor;
 
         .about {
             width: 100%;
@@ -323,6 +323,8 @@ body {
 
         .contact {
             padding: 0 0 3rem 0;
+            left: 10px;
+            top: 30px;
         }
     }
 }
