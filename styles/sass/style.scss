@@ -2,41 +2,41 @@
 @import "mixins";
 
 * {
-   @include overal;
+  @include overal;
 }
 
 body {
-    background: #3a0ca3;
+  background: #3a0ca3;
 }
 
 // ************************* header and logo name
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: $primaryColor;
-    height: 55px;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $primaryColor;
+  height: 55px;
+  width: 100%;
 
-    span {
-        @include textStyle(1.2rem, bold, $secendryColor, capitalize);
-        margin: .9rem 2rem;
-        transition: all .15s ease-in;
+  span {
+    @include textStyle(1.2rem, bold, $secendryColor, capitalize);
+    margin: 0.9rem 2rem;
+    transition: all 0.15s ease-in;
 
-        &:hover {
-            color: $hoverColor;
-            cursor: pointer;
-        }
-    }
-
-    .fa-bars {
-      font-size: 30px;
-      margin: 0.8rem 1.5rem;
-      color: $secendryColor;
+    &:hover {
+      color: $hoverColor;
       cursor: pointer;
-      display: none;
     }
+  }
+
+  .fa-bars {
+    font-size: 30px;
+    margin: 0.8rem 1.5rem;
+    color: $secendryColor;
+    cursor: pointer;
+    display: none;
+  }
 }
 
 // .active {
@@ -46,289 +46,295 @@ body {
 // ************************* navbar and logo image
 
 .navbar {
+  display: flex;
+  align-items: center;
+
+  ul {
     display: flex;
-    align-items: center;
+    list-style: none;
 
-    ul {
-        display: flex;
-        list-style: none;
+    a {
+      @include textStyle(0.9rem, 600, $secendryColor, capitalize);
+      text-decoration: none;
+      padding: 12px;
+      transition: all 0.15s ease-in;
 
-        a {
-            @include textStyle(0.9rem, 600, $secendryColor, capitalize);
-            text-decoration: none;
-            padding: 12px;
-            transition: all .15s ease-in;
-
-            &:hover {
-                color: $hoverColor;
-            }
-        }
+      &:hover {
+        color: $hoverColor;
+      }
     }
+  }
 
-    .fa-fire {
-        font-size: 40px;
-        color:#fb83a7; color: -moz-linear-gradient(45deg,  #fb83a7 0%,#fdd29e 100%); color: -webkit-linear-gradient(45deg,  #fb83a7 0%,#fdd29e 100%); color: linear-gradient(45deg,  #fb83a7 0%,#fdd29e 100%);;
-        display: block;
-        margin: .9rem 2rem;
-    }
+  .fa-fire {
+    font-size: 40px;
+    color: #fb83a7;
+    color: -moz-linear-gradient(45deg, #fb83a7 0%, #fdd29e 100%);
+    color: -webkit-linear-gradient(45deg, #fb83a7 0%, #fdd29e 100%);
+    color: linear-gradient(45deg, #fb83a7 0%, #fdd29e 100%);
+    display: block;
+    margin: 0.9rem 2rem;
+  }
 }
-
-
 
 // ************************* main and aside
 
 .maincontainer {
+  display: flex;
+  margin: 2rem;
+  background: $bgColor;
+
+  aside {
+    width: 25%;
+    margin-right: 25px;
     display: flex;
-    margin: 2rem;
-    background: $bgColor;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-    aside {
-        width: 25%; 
-        margin-right: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
+    div {
+      background: $primaryColor;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      border-radius: 10px;
+      @include boxShadow;
+      transition: all 0.15s ease-in;
 
-        div {
-           background: $primaryColor;
-           width: 100%;
-           height: 100px;
-           line-height: 100px;
-           border-radius: 10px;
-           @include boxShadow;
-           transition: all .15s ease-in;
+      &:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+        background: linear-gradient(
+          62deg,
+          rgba(251, 131, 167, 1) 0%,
+          rgba(253, 210, 158, 1) 100%
+        );
+      }
 
-           &:hover {
-               transform: translateY(-5px);
-               cursor: pointer;
-               background: linear-gradient(62deg, rgba(251,131,167,1) 0%, rgba(253,210,158,1) 100%);;
-           }
-
-           p {
-               @include textStyle(0.8rem, bold, $secendryColor, capitalize);
-               text-align: center;
-           }
-        }
+      p {
+        @include textStyle(0.8rem, bold, $secendryColor, capitalize);
+        text-align: center;
+      }
     }
+  }
 
-
-
-// ************************ main styles
-    main {
-        width: 75%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-// ************************* main image
-
-        img {
-            width: 600px;
-            display: block;
-            margin: 1rem 0 0 1rem;
-            @include boxShadow;
-        }
-
-// ************************* main content
-
-        .maincontent {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            h1 {
-                margin: 1rem 0 1rem;
-                @include textStyle(1.5rem, bold, $secendryColor, uppercase);
-                letter-spacing: 5px;
-            }
-    
-            p {
-                margin: 1rem 0 3rem;
-                @include textStyle(0.9rem, bold, black, capitalize);
-            }
-        }
-    }
-
-    aside, main {
-        @include mainStyle;
-        @include boxShadow;
-    }
-}
-
-// ************************* cards styles 
-
-.cards {
+  // ************************ main styles
+  main {
+    width: 75%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    width: calc(100% - 4rem);
-    margin: 1rem auto;
 
-    .card {
-        
-        img {
-            width: 100%;
-            @include boxShadow;
-        }
+    // ************************* main image
+
+    img {
+      width: 600px;
+      display: block;
+      margin: 1rem 0 0 1rem;
+      @include boxShadow;
+    }
+
+    // ************************* main content
+
+    .maincontent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        margin: 1rem 0 1rem;
+        @include textStyle(1.5rem, bold, $secendryColor, uppercase);
+        letter-spacing: 5px;
+      }
+
+      p {
+        margin: 1rem 0 3rem;
+        @include textStyle(0.9rem, bold, black, capitalize);
+      }
+    }
+  }
+
+  aside,
+  main {
+    @include mainStyle;
+    @include boxShadow;
+  }
+}
+
+// ************************* cards styles
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: calc(100% - 4rem);
+  margin: 1rem auto;
+
+  .card {
+    img {
+      width: 100%;
+      @include boxShadow;
+    }
 
     .cardcontent {
-            padding: 1rem;
-            background: rgba( 255, 255, 255, 0.05 );
-            backdrop-filter: blur( 10.0px );
-            -webkit-backdrop-filter: blur( 10.0px );
-            border-radius: 10px;
-            border: 1px solid rgba( 255, 255, 255, 0.18 );
-            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-            @include boxShadow;
-            transition: all .20s ease-in;
-            margin-top: 1rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      @include boxShadow;
+      transition: all 0.2s ease-in;
+      margin-top: 1rem;
 
-            &:hover {
-                transform: translateY(-10px);
-                cursor: pointer;
-                background: linear-gradient(62deg, rgba(251,131,167,1) 0%, rgba(253,210,158,1) 100%);;;
-                
-                p {@include textStyle(.8rem, 700, #fff, capitalize);}
-            }
+      &:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+        background: linear-gradient(
+          62deg,
+          rgba(251, 131, 167, 1) 0%,
+          rgba(253, 210, 158, 1) 100%
+        );
 
-            p {
-                text-align: center;
-                margin: 0.5rem 0 1rem;
-                line-height: 1.4rem;
-                padding: 0 1rem 0;
-                @include textStyle(.8rem, 600, #e6e6e6, capitalize);
-            }
-
-            span {
-                @include textStyle(.8rem, bold, #fff, capitalize);
-                display: inline-block;
-            }
+        p {
+          @include textStyle(0.8rem, 700, #fff, capitalize);
         }
+      }
+
+      p {
+        text-align: center;
+        margin: 0.5rem 0 1rem;
+        line-height: 1.4rem;
+        padding: 0 1rem 0;
+        @include textStyle(0.8rem, 600, #e6e6e6, capitalize);
+      }
+
+      span {
+        @include textStyle(0.8rem, bold, #fff, capitalize);
+        display: inline-block;
+      }
     }
+  }
 }
 
 // ************************* footer styles
 
 .footer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  background: url(/images/wave.svg) no-repeat center/cover;
+
+  .about {
+    width: 50%;
+    padding: 5rem 2rem 0;
+    line-height: 1.5rem;
+
+    p {
+      @include textStyle(0.9rem, 600, $secendryColor, capitalize);
+    }
+  }
+
+  .contact {
+    position: relative;
+    right: 250px;
+    top: 30px;
+
+    ul {
+      list-style: none;
+
+      a {
+        @include textStyle(0.9rem, 500, $secendryColor, capitalize);
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px;
+        transition: all 0.15s ease-in;
+
+        &:hover {
+          padding-bottom: 0.3rem;
+          border-bottom: 2px solid $secendryColor;
+        }
+      }
+    }
+  }
+}
+
+@include mediaquery(M) {
+  .header {
+    .fa-bars {
+      display: block;
+    }
+  }
+  .navbar {
+    display: none;
+    justify-content: center;
     align-items: center;
-    height: 300px;
-    background: url(/images/wave.svg) no-repeat center/cover;
+    z-index: 99;
+
+    ul {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: absolute;
+      right: 0;
+      background: blue;
+      margin: 1.7rem auto;
+      width: 50%;
+      height: 650px;
+      transform: translate(700px);
+      transition: all 0.15s ease-in;
+
+      a {
+        display: inline-block;
+        margin-top: 30px;
+      }
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  .maincontainer {
+    flex-direction: column-reverse;
+
+    main {
+      width: 100%;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    aside {
+      margin: 1.5rem 0;
+      width: 100%;
+    }
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .footer {
+    height: 500px;
+    justify-content: space-around;
+    flex-direction: column;
+    background: $primaryColor;
 
     .about {
-        width: 50%;
-        padding: 5rem 2rem 0;
-        line-height: 1.5rem;
-
-        p {
-            @include textStyle(.9rem, 600, $secendryColor, capitalize);
-        }
+      width: 100%;
+      padding: 4rem 1rem 0 1rem;
+      text-align: center;
     }
 
     .contact {
-        position: relative;
-        right: 250px;
-        top: 30px;
-
-        ul {
-            list-style: none;
-
-            a {
-                @include textStyle(.9rem, 500, $secendryColor, capitalize);
-                text-decoration: none;
-                display: inline-block;
-                margin: 10px;
-                transition: all .15s ease-in;
-
-                &:hover {
-                  padding-bottom: 0.3rem;  
-                  border-bottom: 2px solid $secendryColor;
-                }
-            }
-        }
-
+      padding: 0 0 3rem 0;
+      left: 10px;
+      top: 10px;
     }
-}
-
-
-@include mediaquery(M) {
-    .header {
-        .fa-bars {
-            display: block;
-        }
-    }
-    .navbar {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        z-index: 99;
-    
-
-        ul {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            position: absolute;
-            right: 0;
-            background: blue;
-            margin: 1.7rem auto;
-            width: 50%;
-            height: 650px;
-            transform: translate(700px);
-            transition: all .15s ease-in;
-            
-            a {
-                display: inline-block;
-                margin-top: 30px;
-            }
-        }
-
-        img {
-            display: none;
-        }
-    }
-    
-    .maincontainer {
-        flex-direction: column-reverse;
-
-        main {
-            width: 100%;
-
-            img {
-                width: 50%;
-            }
-        }
-
-        aside {
-            margin: 1.5rem 0;
-            width: 100%;
-        }
-    }
-
-    .cards {
-        flex-direction: column;
-    }
-
-    .footer {
-        height: 500px;
-        justify-content: space-around;
-        flex-direction: column;
-        background: $primaryColor;
-
-        .about {
-            width: 100%;
-            padding: 4rem 1rem 0 1rem ;
-            text-align: center;
-        }
-
-        .contact {
-            padding: 0 0 3rem 0;
-            left: 10px;
-            top: 10px;
-        }
-    }
+  }
 }
