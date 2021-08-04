@@ -274,25 +274,27 @@ body {
     align-items: center;
     z-index: 99;
 
+    .showmenu {
+      opacity: 1;
+    }
+
     ul {
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       position: absolute;
       right: 0;
-      background: blue;
+      background: #5000ca;
       margin: 1.7rem auto;
       width: 50%;
-      height: 650px;
-      transform: translate(-700px);
-      transition: all 0.15s ease-in;
-      .showmenu {
-        transform: translate(0);
-      }
+      height: 50%;
+      opacity: 0;
+      transition: all .20s ease-in;
 
       a {
         display: inline-block;
         margin-top: 30px;
+       
       }
     }
 

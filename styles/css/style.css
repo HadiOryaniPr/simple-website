@@ -257,21 +257,21 @@ body {
     align-items: center;
     z-index: 99;
   }
+  .navbar .showmenu {
+    opacity: 1;
+  }
   .navbar ul {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     position: absolute;
     right: 0;
-    background: blue;
+    background: #5000ca;
     margin: 1.7rem auto;
     width: 50%;
-    height: 650px;
-    transform: translate(-700px);
-    transition: all 0.15s ease-in;
-  }
-  .navbar ul .showmenu {
-    transform: translate(0);
+    height: 50%;
+    opacity: 0;
+    transition: all 0.2s ease-in;
   }
   .navbar ul a {
     display: inline-block;
