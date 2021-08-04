@@ -110,7 +110,9 @@ body {
   align-items: center;
 }
 .maincontainer main img {
-  width: 500px;
+  width: 600px;
+  display: block;
+  margin: 1rem 0 0 1rem;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
@@ -176,6 +178,7 @@ body {
 .cards .card .cardcontent:hover {
   transform: translateY(-10px);
   cursor: pointer;
+  background: linear-gradient(62deg, #fb83a7 0%, #fdd29e 100%);
 }
 .cards .card .cardcontent:hover p {
   font-size: 0.8rem;
@@ -253,6 +256,26 @@ body {
     align-items: center;
     z-index: 99;
   }
+  .navbar ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    background: blue;
+    margin: 1.7rem auto;
+    width: 50%;
+    height: 650px;
+    transform: translate(700px);
+    transition: all 0.15s ease-in;
+  }
+  .navbar ul a {
+    display: inline-block;
+    margin-top: 30px;
+  }
+  .navbar img {
+    display: none;
+  }
 
   .maincontainer {
     flex-direction: column-reverse;
@@ -261,7 +284,7 @@ body {
     width: 100%;
   }
   .maincontainer main img {
-    width: 300px;
+    width: 50%;
   }
   .maincontainer aside {
     margin: 1.5rem 0;

@@ -125,7 +125,9 @@ body {
 // ************************* main image
 
         img {
-            width: 500px;
+            width: 600px;
+            display: block;
+            margin: 1rem 0 0 1rem;
             @include boxShadow;
         }
 
@@ -187,6 +189,7 @@ body {
             &:hover {
                 transform: translateY(-10px);
                 cursor: pointer;
+                background: linear-gradient(62deg, rgba(251,131,167,1) 0%, rgba(253,210,158,1) 100%);;;
                 
                 p {@include textStyle(.8rem, 700, #fff, capitalize);}
             }
@@ -265,28 +268,28 @@ body {
         z-index: 99;
     
 
-        // ul {
-        //     flex-direction: column;
-        //     justify-content: flex-start;
-        //     align-items: center;
-        //     position: absolute;
-        //     right: 0;
-        //     background: blue;
-        //     margin: 1.7rem auto;
-        //     width: 50%;
-        //     height: 650px;
-        //     transform: translate(700px);
-        //     transition: all .15s ease-in;
+        ul {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            background: blue;
+            margin: 1.7rem auto;
+            width: 50%;
+            height: 650px;
+            transform: translate(700px);
+            transition: all .15s ease-in;
             
-        //     a {
-        //         display: inline-block;
-        //         margin-top: 30px;
-        //     }
-        // }
+            a {
+                display: inline-block;
+                margin-top: 30px;
+            }
+        }
 
-        // img {
-        //     display: none;
-        // }
+        img {
+            display: none;
+        }
     }
     
     .maincontainer {
@@ -296,7 +299,7 @@ body {
             width: 100%;
 
             img {
-                width: 300px;
+                width: 50%;
             }
         }
 
