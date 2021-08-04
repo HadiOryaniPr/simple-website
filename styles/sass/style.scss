@@ -125,7 +125,7 @@ body {
 // ************************* main image
 
         img {
-            width: 400px;
+            width: 500px;
             @include boxShadow;
         }
 
@@ -214,11 +214,11 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 300px;
-    background: url(/images/wave.svg);
+    background: url(/images/wave.svg) no-repeat center/cover;
 
     .about {
         width: 50%;
-        padding: 4.5rem 2rem 0;
+        padding: 5rem 2rem 0;
         line-height: 1.5rem;
 
         p {
@@ -318,6 +318,7 @@ body {
 
         .about {
             width: 100%;
+            padding: 4rem 0 0 0 ;
             text-align: center;
         }
 
