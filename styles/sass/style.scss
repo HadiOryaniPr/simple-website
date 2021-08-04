@@ -21,7 +21,7 @@ body {
 
     span {
         @include textStyle(1.2rem, bold, $secendryColor, capitalize);
-        margin: 2rem;
+        margin: .9rem 2rem;
         transition: all .15s ease-in;
 
         &:hover {
@@ -65,12 +65,11 @@ body {
         }
     }
 
-    img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
+    .fa-fire {
+        font-size: 40px;
+        color:#fb83a7; color: -moz-linear-gradient(45deg,  #fb83a7 0%,#fdd29e 100%); color: -webkit-linear-gradient(45deg,  #fb83a7 0%,#fdd29e 100%); color: linear-gradient(45deg,  #fb83a7 0%,#fdd29e 100%);;
         display: block;
-        margin: 0.8rem 2rem 0.8rem 1rem;
+        margin: .9rem 2rem;
     }
 }
 
@@ -103,6 +102,7 @@ body {
            &:hover {
                transform: translateY(-5px);
                cursor: pointer;
+               background: linear-gradient(62deg, rgba(251,131,167,1) 0%, rgba(253,210,158,1) 100%);;
            }
 
            p {
@@ -318,14 +318,14 @@ body {
 
         .about {
             width: 100%;
-            padding: 4rem 0 0 0 ;
+            padding: 4rem 1rem 0 1rem ;
             text-align: center;
         }
 
         .contact {
             padding: 0 0 3rem 0;
             left: 10px;
-            top: 30px;
+            top: 10px;
         }
     }
 }
