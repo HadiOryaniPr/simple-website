@@ -252,7 +252,7 @@ body {
   }
 
   .navbar {
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 99;
@@ -267,14 +267,17 @@ body {
     margin: 1.7rem auto;
     width: 50%;
     height: 650px;
-    transform: translate(700px);
+    transform: translate(-700px);
     transition: all 0.15s ease-in;
+  }
+  .navbar ul .showmenu {
+    transform: translate(0);
   }
   .navbar ul a {
     display: inline-block;
     margin-top: 30px;
   }
-  .navbar img {
+  .navbar .fa-fire {
     display: none;
   }
 
